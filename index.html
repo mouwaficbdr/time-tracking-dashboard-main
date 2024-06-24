@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="user-card">
+      <div class="user-infos">
+          <img src="images/image-jeremy.png" alt="User image">
+          <p>Report for</p>
+          <p class="user-name">Jeremy <br> Robson</p>
+      </div>
+      <div class="basis">
+        <ul>
+          <li>
+            <button type="button" id="daily-btn">Daily</button>
+          </li>
+          <li>
+            <button type="button" id="weekly-btn">Weekly</button>
+          </li>
+          <li>
+            <button type="button" id="monthly-btn">Monthly</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="task-card">
+      <div class="task-background">
+        <img src="images/icon-work.svg" alt="Suitcase icon">
+      </div>
+      <div class="task-infos">
+        <div class="task-name">
+          <p class="task-title">Work</p>
+          <span>
+            <img src="images/icon-ellipsis.svg" alt="">
+          </span>
+        </div>
+        <p class="task-current-duration"></p>
+        <p class="task-previous-duration"></p>
+      </div>
+    </div>
+    <div class="task-card">
+      <div class="task-background">
+        <img src="images/icon-play.svg" alt="Controller icon">
+      </div>
+      <div class="task-infos">
+        <div class="task-name">
+          <p class="task-title">Play</p>
+          <span>
+            <img src="images/icon-ellipsis.svg" alt="">
+          </span>
+        </div>
+        <p class="task-current-duration"></p>
+        <p class="task-previous-duration"></p>
+      </div>
+    </div>
+    <div class="task-card">
+      <div class="task-background">
+        <img src="images/icon-study.svg" alt="Book icon">
+      </div>
+      <div class="task-infos">
+        <div class="task-name">
+          <p class="task-title">Study</p>
+          <span>
+            <img src="images/icon-ellipsis.svg" alt="">
+          </span>
+        </div>
+        <p class="task-current-duration"></p>
+        <p class="task-previous-duration"></p>
+      </div>
+    </div>
+    <div class="task-card">
+      <div class="task-background">
+        <img src="images/icon-exercise.svg" alt="Running stickman icon">
+      </div>
+      <div class="task-infos">
+        <div class="task-name">
+          <p class="task-title">Exercise</p>
+          <span>
+            <img src="images/icon-ellipsis.svg" alt="">
+          </span>
+        </div>
+        <p class="task-current-duration"></p>
+        <p class="task-previous-duration"></p>
+      </div>
+    </div>
+    <div class="task-card">
+      <div class="task-background">
+        <img src="images/icon-social.svg" alt="Bubble chat icon">
+      </div>
+      <div class="task-infos">
+        <div class="task-name">
+          <p class="task-title">Social</p>
+          <span>
+            <img src="images/icon-ellipsis.svg" alt="">
+          </span>
+        </div>
+        <p class="task-current-duration"></p>
+        <p class="task-previous-duration"></p>
+      </div>
+    </div>
+    <div class="task-card">
+      <div class="task-background">
+        <img src="images/icon-self-care.svg" alt="Heart icon">
+      </div>
+      <div class="task-infos">
+        <div class="task-name">
+          <p class="task-title">Self Care</p>
+          <span>
+            <img src="images/icon-ellipsis.svg" alt="">
+          </span>
+        </div>
+        <p class="task-current-duration"></p>
+        <p class="task-previous-duration"></p>
+      </div>
+    </div>
+  </div>
+  
+  Work
+  5hrs <!-- daily -->
+  Previous - 7hrs <!-- daily -->
+  32hrs <!-- weekly -->
+  Previous - 36hrs <!-- weekly -->
+  103hrs <!-- monthly -->
+  Previous - 128hrs <!-- monthly -->
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+  <script src="script.js"></script>
+</body>
+</html>
