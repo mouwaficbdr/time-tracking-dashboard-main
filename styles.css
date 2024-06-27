@@ -1,5 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-family: "Rubik", sans-serif;
+  background-color: hsl(226, 43%, 10%);
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.user-card {
+  display: flex;
+  flex-direction: column;
+  grid-row: 1/3;
+  border-radius: 10px;
+  width: 200px;
+  position: relative;
+}
+.user-card .user-infos {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(246, 80%, 60%);
+  border-radius: 10px;
+  width: 100%;
+  height: 70%;
+  padding-left: 20px;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 2;
+}
+.user-card .user-infos .user-image-container {
+  margin: 15px 0 20px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user-card .user-infos .user-image-container img {
+  width: 50px;
+}
+.user-card .user-infos p:first-of-type {
+  font-size: 12px;
+  color: hsl(236, 100%, 87%);
+}
+.user-card .user-infos p:last-of-type {
+  font-size: 30px;
+  color: white;
+  margin-bottom: 100px;
+}
+.user-card .basis {
+  padding-left: 20px;
+  background-color: hsl(235, 46%, 20%);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-bottom: 20px;
+  width: 100%;
+  height: 30%;
+  position: relative;
+  top: -10px;
+  z-index: 1;
+}
+.user-card .basis li {
+  margin-top: 10px;
+}
+.user-card .basis li button {
+  border: none;
+  background-color: inherit;
+  color: hsl(236, 100%, 87%);
+  cursor: pointer;
+}
+.user-card .basis li button:hover {
+  color: white;
+}
+.user-card .basis li:first-of-type {
+  margin-top: 20px;
+}
+
+.task-card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+  border-radius: 10px;
+}
+.task-card .task-background {
+  width: 100%;
+  height: 45px;
+  position: relative;
+  z-index: inherit;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.task-card .task-background img {
+  width: 50px;
+  position: absolute;
+  overflow: hidden;
+  right: 10px;
+}
+.task-card .work-background {
+  background-color: hsl(15, 100%, 70%);
+}
+.task-card .play-background {
+  background-color: hsl(195, 74%, 62%);
+}
+.task-card .study-background {
+  background-color: hsl(348, 100%, 68%);
+}
+.task-card .exercise-background {
+  background-color: hsl(145, 58%, 55%);
+}
+.task-card .social-background {
+  background-color: hsl(264, 64%, 52%);
+}
+.task-card .self-care-background {
+  background-color: hsl(43, 84%, 65%);
+}
+.task-card .task-infos {
+  padding: 0 15px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: hsl(235, 46%, 20%);
+  position: absolute;
+  z-index: 2;
+  top: 35px;
+}
+.task-card .task-infos .task-name {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  width: 100%;
+}
+.task-card .task-infos .task-current-duration {
+  padding-left: 15px;
+  color: white;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.task-card .task-infos .task-previous-duration {
+  padding-left: 15px;
+  color: hsl(236, 100%, 87%);
+  font-size: 12px;
+  margin-bottom: 20px;
 }/*# sourceMappingURL=styles.css.map */
