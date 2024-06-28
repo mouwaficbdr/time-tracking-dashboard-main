@@ -32,6 +32,10 @@ li{
   align-items: center;
 }
 
+.active{
+  color: white !important;
+}
+
 body{
   height: 100vh;
   @include flex();
@@ -41,7 +45,6 @@ body{
 }
 
 .container{
-  // max-width: 80%;
   display: grid;
   place-items: center;
   grid-template-columns: repeat(4, 1fr);
@@ -55,7 +58,6 @@ body{
   grid-row: 1/3;
   border-radius: 10px;
   width: 200px;
-  // height: 380px;
   position: relative;
 
 
@@ -96,6 +98,8 @@ body{
         font-size: 30px;
         color: white;
         margin-bottom: 100px;
+        display: flex;
+        flex-direction: column;
 
       }
     
@@ -192,7 +196,7 @@ body{
       top: 35px;
 
       .task-name{
-        padding: 15px;
+        padding: 15px 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -201,17 +205,129 @@ body{
       }
 
       .task-current-duration{
-        padding-left: 15px;
         color: white;
         font-size: 40px;
         margin-bottom: 10px;
       }
 
       .task-previous-duration{
-        padding-left: 15px;
         color: $pale-blue;
         font-size: 12px;
         margin-bottom: 20px;
+      }
+    }
+
+  }
+
+  @media only screen and (max-width: 930px){
+
+    .user-card, .task-card{
+      width: 150px;
+      height: 200px;
+    }
+
+    .task-card{
+
+      .task-current-duration, .task-previous-duration{
+        margin-left: 0;
+      }
+    }
+  }
+
+
+  @media only screen and (max-width: 375px){
+    
+    body{
+      height: 100%;
+    }
+
+    .container{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(7, 1fr);
+      gap: 15px;
+      place-items: center;
+      height: 100%;
+      width: 100%;
+      padding: 50px 0;
+
+      .user-card, .task-card{
+        width: 90%;
+        height: 100%;
+      }
+
+      .user-card{
+        grid-row: 1/1;
+
+        .user-infos{
+          @include flex();
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100px;
+          padding-left: 0;
+
+          .user-image-container{
+            width: 63px;
+            height: 63px;
+            margin: 0 20px 0 0 ;
+
+            img{
+              width: 60px;
+            }
+          }
+
+          .user-name{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+
+            p:last-of-type{
+              font-size: 20px;
+              display: flex;
+              flex-direction: row;
+              margin-bottom: 0;
+            }
+          }
+        }
+
+        .basis{
+          top: 0;
+          height: 70px;
+          padding-left: 0;
+          top: -10px;
+        }
+
+        .basis ul{
+          transform: translateY(10px);
+          height: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          align-items: center;
+
+          li{
+            margin-top: 0;
+          }
+        }
+      }
+
+      .task-card{
+
+        .task-infos{
+          height: 120px;
+          .task-duration{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .task-previous-duration, .task-current-duration{
+              margin-bottom: 0;
+            }
+          }
+        }
       }
     }
 

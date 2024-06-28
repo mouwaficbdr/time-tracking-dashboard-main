@@ -9,6 +9,10 @@ li {
   list-style: none;
 }
 
+.active {
+  color: white !important;
+}
+
 body {
   height: 100vh;
   display: flex;
@@ -68,6 +72,8 @@ body {
   font-size: 30px;
   color: white;
   margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
 }
 .user-card .basis {
   padding-left: 20px;
@@ -148,7 +154,7 @@ body {
   top: 35px;
 }
 .task-card .task-infos .task-name {
-  padding: 15px;
+  padding: 15px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -156,14 +162,103 @@ body {
   width: 100%;
 }
 .task-card .task-infos .task-current-duration {
-  padding-left: 15px;
   color: white;
   font-size: 40px;
   margin-bottom: 10px;
 }
 .task-card .task-infos .task-previous-duration {
-  padding-left: 15px;
   color: hsl(236, 100%, 87%);
   font-size: 12px;
   margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 930px) {
+  .user-card, .task-card {
+    width: 150px;
+    height: 200px;
+  }
+  .task-card .task-current-duration, .task-card .task-previous-duration {
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 375px) {
+  body {
+    height: 100%;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 1fr);
+    gap: 15px;
+    place-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 50px 0;
+  }
+  .container .user-card, .container .task-card {
+    width: 90%;
+    height: 100%;
+  }
+  .container .user-card {
+    grid-row: 1/1;
+  }
+  .container .user-card .user-infos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    padding-left: 0;
+  }
+  .container .user-card .user-infos .user-image-container {
+    width: 63px;
+    height: 63px;
+    margin: 0 20px 0 0;
+  }
+  .container .user-card .user-infos .user-image-container img {
+    width: 60px;
+  }
+  .container .user-card .user-infos .user-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+  .container .user-card .user-infos .user-name p:last-of-type {
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0;
+  }
+  .container .user-card .basis {
+    top: 0;
+    height: 70px;
+    padding-left: 0;
+    top: -10px;
+  }
+  .container .user-card .basis ul {
+    transform: translateY(10px);
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .container .user-card .basis ul li {
+    margin-top: 0;
+  }
+  .container .task-card .task-infos {
+    height: 120px;
+  }
+  .container .task-card .task-infos .task-duration {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .container .task-card .task-infos .task-duration .task-previous-duration, .container .task-card .task-infos .task-duration .task-current-duration {
+    margin-bottom: 0;
+  }
 }/*# sourceMappingURL=styles.css.map */
