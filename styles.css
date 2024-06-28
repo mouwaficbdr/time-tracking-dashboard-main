@@ -175,6 +175,11 @@ body {
 @media only screen and (max-width: 930px) {
   .user-card, .task-card {
     width: 150px;
+  }
+  .user-card {
+    grid-row: 1/3;
+  }
+  .task-card {
     height: 200px;
   }
   .task-card .task-current-duration, .task-card .task-previous-duration {

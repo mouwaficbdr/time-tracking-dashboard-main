@@ -223,10 +223,14 @@ body{
 
     .user-card, .task-card{
       width: 150px;
-      height: 200px;
+    }
+
+    .user-card{
+      grid-row: 1/3;
     }
 
     .task-card{
+      height: 200px;
 
       .task-current-duration, .task-previous-duration{
         margin-left: 0;
